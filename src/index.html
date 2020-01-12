@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+</head>
+
+<body>
+    <style id="style"></style>
+    <div id="demo"></div>
+    <div id="dic1Warpper">
+        <div id="div1"></div>
+    </div>
+    <script src="main.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #demo {
+            word-break: break-all;
+            overflow: auto;
+        }
+
+        #div1 {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+        }
+
+        #div1::before {
+            position: absolute;
+            content: '';
+            display: block;
+            /* border: 1px solid red; */
+            width: 100px;
+            height: 100px;
+        }
+
+        #div1::after {
+            position: absolute;
+            content: '';
+            display: block;
+            /* border: 1px solid red; */
+            width: 100px;
+            height: 100px;
+        }
+
+        @media (max-width: 500px) {
+            #demo {
+                height: 50vh;
+            }
+
+            #div1Warpper {
+                height: 50vh;
+            }
+
+            #div1 {
+                position: relative;
+                top: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</body>
+
+</html>
