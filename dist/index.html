@@ -9,66 +9,53 @@
 </head>
 
 <body>
-    <style id="style"></style>
-    <div id="demo"></div>
-    <div id="dic1Warpper">
-        <div id="div1"></div>
-    </div>
-    <script src="/main.1f19ae8e.js"></script>
-    <style>* {
+    <style id="style">
+        * {
             margin: 0;
             padding: 0;
-        }
-
-        * {
-            box-sizing: border-box;
+            box-sizing: border-box
         }
 
         #demo {
             word-break: break-all;
-            overflow: auto;
+            overflow: auto
         }
 
         #div1 {
             position: fixed;
             right: 20px;
-            top: 20px;
+            top: 20px
         }
 
-        #div1::before {
+        #div1:after,
+        #div1:before {
             position: absolute;
-            content: '';
+            content: "";
             display: block;
-            /* border: 1px solid red; */
             width: 100px;
-            height: 100px;
+            height: 100px
         }
 
-        #div1::after {
-            position: absolute;
-            content: '';
-            display: block;
-            /* border: 1px solid red; */
-            width: 100px;
-            height: 100px;
-        }
+        @media (max-width:500px) {
 
-        @media (max-width: 500px) {
-            #demo {
-                height: 50vh;
-            }
-
+            #demo,
             #div1Warpper {
-                height: 50vh;
+                height: 50vh
             }
 
             #div1 {
                 position: relative;
                 top: 50px;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-50%)
             }
-        }</style>
+        }
+    </style>
+    <div id="demo"></div>
+    <div id="dic1Warpper">
+        <div id="div1"></div>
+    </div>
+    <script src="dist/main.c9c67470.js"></script>
 </body>
 
 </html>
